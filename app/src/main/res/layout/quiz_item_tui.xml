@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+<!--퀴즈 메인(quiz.xml)의 리스트에 사용되는 아이템-->
+    <!--진행 중인 과외의 정보-->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="과외명"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/teacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="선생님명"
+        android:textSize="15dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/teacher"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="학생명"
+        android:textSize="15dp"
+        android:textStyle="bold"/>
+
+    <!--프로그레스바:출제된 총 문제 중 몇 개를 풀었는지에 관한 진행도 표시-->
+    <ProgressBar
+        android:id="@+id/quizper_prog"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/student"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:progress="5"
+        android:max="10"
+        android:progressDrawable="@drawable/progress_quiz"
+        />
+    <!--프로그레스바 사이즈는 setProgress() 로 설정 가능-->
+
+</RelativeLayout>
